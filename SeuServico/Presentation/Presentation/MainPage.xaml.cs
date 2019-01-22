@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Presentation.Views;
+using Presentation;
 
 namespace Presentation
 {
@@ -13,5 +15,12 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+        public void OnLoginClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MenuPage());
+        }
+
+
     }
 }
