@@ -65,6 +65,9 @@ class App extends Component {
           this.state.isLoading &&
             <span>Aguarde, carregando...</span>
 
+      }{
+        !this.state.isLoading &&
+        <span>{JSON.stringify(this.state.genres)}}</span>
       }
 
       </section>
