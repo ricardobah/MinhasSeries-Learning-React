@@ -3,17 +3,28 @@ import logo from './logo.svg'
 import './App.css'
 import {Ola,Flw} from './Ola'
 import axios from 'axios'
+import apis from './api'
 class App extends Component {
   constructor(props){
     super(props)
       this.state={
-        count:0
+        count:0,
+        genres:[],
+        isLoading:false
       }
     
   }  
   componentDidMount(){
+    this.setState.isLoading = true;
     setInterval(()=> this.setState({count: this.state.count+1}),1000)
-    axios.get('http://localhost:3001/genres').then((res)=>console.log(res))
+    apis.loadGenres().then((res)=>{
+      console.log(res)
+      this.setState({
+        isLoading:false,
+        genres:res.data
+
+      })
+    })
   }
   render() {
     return (
@@ -48,6 +59,16 @@ class App extends Component {
           </div>
         </div>
       </section>
+      
+      <section>
+      {
+          this.state.isLoading &&
+            <span>Aguarde, carregando...</span>
+
+      }
+
+      </section>
+
     </div>
     );
   }
