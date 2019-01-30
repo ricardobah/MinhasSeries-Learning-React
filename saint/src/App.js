@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg'
+
 import './App.css'
 import {Ola,Flw} from './Ola'
 import axios from 'axios'
@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom'
 import Home from './home'
 
-import {Dexter} from  './series'
+import { Series} from  './series'
 
 class App extends Component {
 
@@ -46,7 +46,7 @@ class App extends Component {
     
     <Route exact path ='/' component={Home}/>
     <Route exact path ='/create' component={Create}/>
-    <Route exact path ='/series/:genre' component={Dexter}/>
+    <Route exact path ='/series/:genre' component={Series}/>
     {/* <Home/> */}
 
     </div>

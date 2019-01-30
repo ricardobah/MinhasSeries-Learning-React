@@ -5,7 +5,8 @@
       "name": "How I met your mother",
       "status": "watched",
       "genre": "Comédia",
-      "comments": "Muito bom"
+      "comments": "Muito bom",
+      "img": ""
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
         "season": "09"
       },
       "comments": "Bom para descontrair",
-      "description": "Dexter é uma série televisiva americana de drama/suspense centrada em Dexter Morgan, um assassino em série com diferentes padrões que trabalha como analista forense especialista em padrões de dispersão de sangue no departamento da polícia do Condado de Miami-Dade.[1] O programa estreou em 1 de outubro de 2006 no canal Showtime e teve o seu último episódio em 22 de setembro de 2013. Situado em Miami, sua primeira temporada foi fortemente baseada no livro Darkly Dreaming Dexter de Jeff Lindsay, o primeiro de sua série de romances Dexter. Temporadas posteriores apresentaram uma evolução distinta das obras de Lindsay. O livro foi adaptado para a televisão pelo roteirista James Manos Jr., que escreveu o episódio piloto."
+      "description": "Dexter é uma série televisiva americana de drama/suspense centrada em Dexter Morgan, um assassino em série com diferentes padrões que trabalha como analista forense especialista em padrões de dispersão de sangue no departamento da polícia do Condado de Miami-Dade.[1] O programa estreou em 1 de outubro de 2006 no canal Showtime e teve o seu último episódio em 22 de setembro de 2013. Situado em Miami, sua primeira temporada foi fortemente baseada no livro Darkly Dreaming Dexter de Jeff Lindsay, o primeiro de sua série de romances Dexter. Temporadas posteriores apresentaram uma evolução distinta das obras de Lindsay. O livro foi adaptado para a televisão pelo roteirista James Manos Jr., que escreveu o episódio piloto.",
+      "img": ""
     },
     {
       "id": 3,
@@ -39,6 +41,13 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "name": "",
+      "status": "toWatch",
+      "genre": "Comédia",
+      "comment": "",
+      "id": 6
     }
   ],
   "genres": [

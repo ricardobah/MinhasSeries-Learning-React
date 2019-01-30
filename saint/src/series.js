@@ -6,9 +6,51 @@ import apis from './api'
 
 class Series extends Component{
 
+
+
+  renderSeries(){
+
+    return(
+
+<div className="item  col-xs-4 col-lg-4">
+              <div className="thumbnail">
+                <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div className="caption">
+                  <h4 className="group inner list-group-item-heading">
+                    How I met your mother</h4>
+                  <div className="row">
+                    <div className="col-xs-12 col-md-6">
+                      <p className="lead">
+                        AÇÃO</p>
+                    </div>
+                    <div className="col-xs-12 col-md-6">
+                      <a className="btn btn-success" href="">Gerenciar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    )
+
+  }
+
+
+
+
   render(){
     return(
-      <p> </p>
+      <section className="intro-section">
+          <h1>
+            Series {this.props.match.params.genre}
+          </h1>
+
+          <div id="series" className="row list-group">
+            {this.renderSeries()}
+        </div>
+
+
+      </section>
 
     )
     
@@ -20,79 +62,6 @@ class Series extends Component{
 
 
 
-class Dexter extends Component{
-
-    constructor(props){
-        super(props)
-          this.state={
-            count:0,
-            series:[],
-            isLoading:false
-          }
-        
-      }  
-
-      componentDidMount(){
-        this.setState.isLoading = true;
-        apis.loadSeries().then((res)=>{
-            console.log(res)
-            this.setState({
-              isLoading:false,
-              series:res.data
-      
-            })
-          })
-
-      }
-    
 
 
-render(){
-
-return(
-
-            <div>
-                <section id="intro" className="intro-section">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-12">
-                    <img src="../images/Dexter.jpg" />
-                    <section>
-                        {
-                            this.state.isLoading &&
-                                <span>Aguarde, carregando...</span>
-                    
-                        }{
-                            !this.state.isLoading &&
-                            <p>{this.state.series.map((element)=><p>{element.description}</p> )}</p>
-                        }
-                            
-                    </section> 
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <br/><br/><br/><br/>
-
-
-               
-
-
-            </div>
-
-
-
-)
-    
-}
-
-
-
-
-}
-
-
-
-
-
-export {Dexter, Series}
+export { Series}
