@@ -1,8 +1,6 @@
-To run database use : 
-open cmd/terminal
-
+To run database : 
 yarn json-server db.json -p [portnumber(ex:3001)] --watch
 
-open other cmd/terminal
 
+to run project:
 yarn start
