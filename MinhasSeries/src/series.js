@@ -19,21 +19,25 @@ class Series extends Component{
       isLoading: false,
       series:[]
     }
-    
+    this.loadData = this.loadData.bind(this)
     this.renderSeries=this.renderSeries.bind(this)
   }
 
   componentDidMount(){
-    apis.loadSeriesByGenre(this.props.match.params.genre).then((res)=>{this.setState({
-        isLoading:false,
-        series: res.data
-
-    })})
+    this.loadData()
 
   }
 
-  deleteSeries(id){
+  loadData(){
+    apis.loadSeriesByGenre(this.props.match.params.genre).then((res)=>{this.setState({
+      isLoading:false,
+      series: res.data
 
+  })})
+  }
+
+  deleteSeries(id){
+    apis.deleteSeries(id).then((res)=> this.loadData())
   }
 
 

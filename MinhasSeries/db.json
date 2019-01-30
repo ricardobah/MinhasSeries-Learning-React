@@ -50,13 +50,6 @@
       "id": 6
     },
     {
-      "name": "123",
-      "status": "toWatch",
-      "genre": "Comédia",
-      "comment": "1",
-      "id": 7
-    },
-    {
       "name": "teste",
       "status": "toWatch",
       "genre": "Ação",
@@ -85,10 +78,10 @@
       "id": 11
     },
     {
-      "name": "rrr",
+      "name": "teste",
       "status": "toWatch",
       "genre": "Comédia",
-      "comment": "1",
+      "comment": "11",
       "id": 12
     }
   ],
