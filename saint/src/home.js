@@ -17,6 +17,7 @@ class Home extends Component{
           this.state={
             count:0,
             series:[],
+            genres:[],
             isLoading:false
           }
         
@@ -25,6 +26,16 @@ class Home extends Component{
       componentDidMount(){
         this.setState.isLoading = true;
         setInterval(()=> this.setState({count: this.state.count+1}),1000)
+
+        apis.loadGenres().then((res)=>{
+         
+          this.setState({
+          
+           genres:res.data
+    
+          })
+        })
+
         apis.loadSeries().then((res)=>{
           console.log(res)
           this.setState({
@@ -47,12 +58,12 @@ class Home extends Component{
     )
     }
 
-    renderGenreLink(serie){
+    renderGenreLink(genre){
        
         return(
           <span>
             &nbsp;
-            <Link to={'/'+serie} >{serie}</Link>
+            <Link to={'/'+genre} >{genre}</Link>
             &nbsp;
             </span>
         
@@ -82,7 +93,7 @@ class Home extends Component{
               }{
                 !this.state.isLoading &&
                 // <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de séries: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de generos: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de generos: {this.state.genres.map((element)=>this.renderSerieLink(element))}</div>
               }
         
               </section>

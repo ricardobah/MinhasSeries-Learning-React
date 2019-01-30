@@ -39,20 +39,6 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
-    },
-    {
-      "name": "rrrrr",
-      "status": "toWatch",
-      "genre": "Comédia",
-      "comment": "rrr",
-      "id": 6
-    },
-    {
-      "name": "ricardo",
-      "status": "toWatch",
-      "genre": "Comédia",
-      "comment": "rrr",
-      "id": 7
     }
   ],
   "genres": [
