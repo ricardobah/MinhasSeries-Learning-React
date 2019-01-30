@@ -41,48 +41,6 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
-    },
-    {
-      "name": "",
-      "status": "toWatch",
-      "genre": "Comédia",
-      "comment": "",
-      "id": 6
-    },
-    {
-      "name": "teste",
-      "status": "toWatch",
-      "genre": "Ação",
-      "comment": "a",
-      "id": 8
-    },
-    {
-      "name": "teste1",
-      "status": "toWatch",
-      "genre": "Ação",
-      "comment": "1",
-      "id": 9
-    },
-    {
-      "name": "teste2",
-      "status": "toWatch",
-      "genre": "Ação",
-      "comment": "s",
-      "id": 10
-    },
-    {
-      "name": "testte",
-      "status": "toWatch",
-      "genre": "Ação",
-      "comment": "s",
-      "id": 11
-    },
-    {
-      "name": "teste",
-      "status": "toWatch",
-      "genre": "Comédia",
-      "comment": "11",
-      "id": 12
     }
   ],
   "genres": [

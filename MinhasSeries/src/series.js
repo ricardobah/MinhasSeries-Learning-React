@@ -48,6 +48,7 @@ class Series extends Component{
 <div className="item  col-xs-4 col-lg-4">
               <div className="thumbnail">
                 <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+
                 <div className="caption">
                   <h4 className="group inner list-group-item-heading">
                     {series.name}</h4>
@@ -78,6 +79,15 @@ class Series extends Component{
           <h1>
             Series {this.props.match.params.genre}
           </h1>
+         
+          {
+            this.state.isLoading && <p>Carregando, aguarde...</p>
+          }
+          {
+              this.state.series.length === 0 && <div className='alert alert-info'>Nenhuma série cadastrada.</div>
+              
+          }
+
 
           <div id="series" className="row list-group">
             {
