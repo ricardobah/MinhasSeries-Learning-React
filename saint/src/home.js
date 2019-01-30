@@ -63,7 +63,7 @@ class Home extends Component{
         return(
           <span>
             &nbsp;
-            <Link to={'/'+genre} >{genre}</Link>
+            <Link to={'/series/'+genre} >{genre}</Link>
             &nbsp;
             </span>
         
@@ -93,7 +93,7 @@ class Home extends Component{
               }{
                 !this.state.isLoading &&
                 // <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de séries: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de generos: {this.state.genres.map((element)=>this.renderSerieLink(element))}</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de generos: {this.state.genres.map((element)=>this.renderGenreLink(element))}</div>
               }
         
               </section>

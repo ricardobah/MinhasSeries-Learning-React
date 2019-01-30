@@ -46,7 +46,7 @@ class App extends Component {
     
     <Route exact path ='/' component={Home}/>
     <Route exact path ='/create' component={Create}/>
-    <Route exact path ='/Dexter' component={Dexter}/>
+    <Route exact path ='/series/:genre' component={Dexter}/>
     {/* <Home/> */}
 
     </div>

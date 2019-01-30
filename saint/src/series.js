@@ -2,6 +2,24 @@ import React, {Component} from 'react'
 import apis from './api'
 
 
+
+
+class Series extends Component{
+
+  render(){
+    return(
+      <p> </p>
+
+    )
+    
+  }
+}
+
+
+
+
+
+
 class Dexter extends Component{
 
     constructor(props){
@@ -38,7 +56,7 @@ return(
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-12">
-                    <img src="images/Dexter.jpg" />
+                    <img src="../images/Dexter.jpg" />
                     <section>
                         {
                             this.state.isLoading &&
@@ -77,4 +95,4 @@ return(
 
 
 
-export {Dexter}
+export {Dexter, Series}
