@@ -12,7 +12,6 @@ class Create extends Component{
         genre: this.refs.genre.value,
         comment: this.refs.comment.value
       }
-      
       //apis.saveSerie(newSerie)
       apis.begreen()
       console.log(apis.begreen())
