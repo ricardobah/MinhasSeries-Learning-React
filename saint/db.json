@@ -48,6 +48,13 @@
       "genre": "Comédia",
       "comment": "",
       "id": 6
+    },
+    {
+      "name": "123",
+      "status": "toWatch",
+      "genre": "Comédia",
+      "comment": "1",
+      "id": 7
     }
   ],
   "genres": [

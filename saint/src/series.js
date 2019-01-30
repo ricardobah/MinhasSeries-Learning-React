@@ -6,7 +6,25 @@ import apis from './api'
 
 class Series extends Component{
 
+  constructor(props){
+    super(props)
 
+    this.state = {
+      isLoading: false,
+      series:[]
+    }
+
+  }
+
+  componentDidMount(){
+    apis.loadSeriesByGenre(this.props.match.params.genre).then((res)=>{this.setState({
+        isLoading:false,
+        series: res.data
+
+    })})
+
+
+  }
 
   renderSeries(){
 
@@ -46,7 +64,10 @@ class Series extends Component{
           </h1>
 
           <div id="series" className="row list-group">
-            {this.renderSeries()}
+            {
+              !this.state.isLoading && this.state.series.map(this.renderSeries)
+            
+            }
         </div>
 
 

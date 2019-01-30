@@ -10,6 +10,7 @@ const apis = {
     loadGenres : () => api.get('genres'),
     loadSeries : () => api.get('series'),
     loadstatusSerie : () => api.get('status'),
-    saveSerie : (newSerie) => api.post('series', newSerie)
+    saveSerie : (newSerie) => api.post('series', newSerie),
+    loadSeriesByGenre : (genre) => api.get('series?genre='+genre)
 }
 export default apis
