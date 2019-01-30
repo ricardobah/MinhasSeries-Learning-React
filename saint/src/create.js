@@ -12,9 +12,8 @@ class Create extends Component{
         genre: this.refs.genre.value,
         comment: this.refs.comment.value
       }
-      //apis.saveSerie(newSerie)
-      apis.begreen()
-      console.log(apis.begreen())
+      apis.saveSerie(newSerie)
+      console.log(newSerie)
     }
     
     constructor(props){
@@ -31,24 +30,24 @@ class Create extends Component{
       componentDidMount(){
         this.setState.isLoading = true;
 
-        // apis.loadGenres().then((res)=>{
+        apis.loadGenres().then((res)=>{
            
-        //     this.setState({
+            this.setState({
              
-        //       genre:res.data
+              genre:res.data
       
-        //     })
-        //   })
+            })
+          })
 
-        // apis.loadstatusSerie().then((res)=>{
+        apis.loadstatusSerie().then((res)=>{
            
-        //     this.setState({
+            this.setState({
                 
-        //         isLoading:false,
-        //       statusSerie:res.data
+                isLoading:false,
+              statusSerie:res.data
       
-        //     })
-        //   })
+            })
+          })
 
 
           
@@ -76,7 +75,7 @@ render(){
                 <br/> <br/>
                 Comentários: &nbsp; <input ref='comment' type="text" class-Name="form-control" />
                 <br/> <br/>
-                <button type="button" onClick={this.saveSeries}>Salvar</button>
+                <button  onClick={this.saveSeries}>Salvar</button>
             </form>
         </section> //depois botar imagem e description
     )
