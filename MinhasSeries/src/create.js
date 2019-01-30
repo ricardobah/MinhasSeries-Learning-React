@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import apis from './api'
-
+import { Redirect } from 'react-router-dom'
 
 
 
@@ -12,7 +12,13 @@ class Create extends Component{
         genre: this.refs.genre.value,
         comment: this.refs.comment.value
       }
-      apis.saveSerie(newSerie)
+      apis.saveSerie(newSerie).then(
+
+        this.setState({
+          redirect: '/series/'+this.refs.genre.value
+        })
+
+      )
       console.log(newSerie)
     }
     
@@ -22,7 +28,8 @@ class Create extends Component{
             count:0,
             statusSerie:[],
             genre:[],
-            isLoading:false
+            isLoading:false,
+            redirect:false
           }
         this.saveSeries = this.saveSeries.bind(this)
       }  
@@ -58,7 +65,13 @@ class Create extends Component{
 render(){
 
     return(
-        <section className="intro-section">
+
+      
+      <section className="intro-section">
+      { this.state.redirect &&
+        <Redirect to={this.state.redirect}/>
+      
+      }
 
             <h1>Cadastrar nova série</h1>
             <form>
