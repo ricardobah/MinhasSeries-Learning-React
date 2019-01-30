@@ -1,5 +1,5 @@
 {
-  "series":[
+  "series": [
     {
       "id": 1,
       "name": "How I met your mother",
@@ -12,13 +12,12 @@
       "name": "Dexter",
       "status": "watching",
       "genre": "Comédia",
-      "current":{
+      "current": {
         "episode": "01",
         "season": "09"
       },
       "comments": "Bom para descontrair",
-      "description":"Dexter é uma série televisiva americana de drama/suspense centrada em Dexter Morgan, um assassino em série com diferentes padrões que trabalha como analista forense especialista em padrões de dispersão de sangue no departamento da polícia do Condado de Miami-Dade.[1] O programa estreou em 1 de outubro de 2006 no canal Showtime e teve o seu último episódio em 22 de setembro de 2013. Situado em Miami, sua primeira temporada foi fortemente baseada no livro Darkly Dreaming Dexter de Jeff Lindsay, o primeiro de sua série de romances Dexter. Temporadas posteriores apresentaram uma evolução distinta das obras de Lindsay. O livro foi adaptado para a televisão pelo roteirista James Manos Jr., que escreveu o episódio piloto."
-
+      "description": "Dexter é uma série televisiva americana de drama/suspense centrada em Dexter Morgan, um assassino em série com diferentes padrões que trabalha como analista forense especialista em padrões de dispersão de sangue no departamento da polícia do Condado de Miami-Dade.[1] O programa estreou em 1 de outubro de 2006 no canal Showtime e teve o seu último episódio em 22 de setembro de 2013. Situado em Miami, sua primeira temporada foi fortemente baseada no livro Darkly Dreaming Dexter de Jeff Lindsay, o primeiro de sua série de romances Dexter. Temporadas posteriores apresentaram uma evolução distinta das obras de Lindsay. O livro foi adaptado para a televisão pelo roteirista James Manos Jr., que escreveu o episódio piloto."
     },
     {
       "id": 3,
@@ -40,14 +39,30 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "name": "rrrrr",
+      "status": "toWatch",
+      "genre": "Comédia",
+      "comment": "rrr",
+      "id": 6
+    },
+    {
+      "name": "ricardo",
+      "status": "toWatch",
+      "genre": "Comédia",
+      "comment": "rrr",
+      "id": 7
     }
   ],
-  "genres":[
-    "Comédia", "Drama", "Ação"
+  "genres": [
+    "Comédia",
+    "Drama",
+    "Ação"
   ],
-
-  "status":[
-    "toWatch", "watching", "watched"
+  "status": [
+    "toWatch",
+    "watching",
+    "watched"
   ]
-
 }

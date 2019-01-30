@@ -47,6 +47,18 @@ class Home extends Component{
     )
     }
 
+    renderGenreLink(serie){
+       
+        return(
+          <span>
+            &nbsp;
+            <Link to={'/'+serie} >{serie}</Link>
+            &nbsp;
+            </span>
+        
+        )
+        }
+
     render(){
 
             return(
@@ -69,7 +81,8 @@ class Home extends Component{
         
               }{
                 !this.state.isLoading &&
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de séries: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
+                // <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de séries: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de generos: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
               }
         
               </section>
