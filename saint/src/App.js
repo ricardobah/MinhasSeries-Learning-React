@@ -9,23 +9,36 @@ class App extends Component {
     super(props)
       this.state={
         count:0,
-        genres:[],
+        series:[],
         isLoading:false
       }
     
   }  
+  
   componentDidMount(){
     this.setState.isLoading = true;
     setInterval(()=> this.setState({count: this.state.count+1}),1000)
-    apis.loadGenres().then((res)=>{
+    apis.loadSeries().then((res)=>{
       console.log(res)
       this.setState({
         isLoading:false,
-        genres:res.data
+        series:res.data
 
       })
     })
   }
+
+renderSerieLink(serie){
+return(
+  <span>
+    &nbsp;
+    <a href=''>{serie}</a>
+    &nbsp;
+    </span>
+
+)
+}
+
   render() {
     return (
       <div>
@@ -59,7 +72,7 @@ class App extends Component {
           </div>
         </div>
       </section>
-      
+      <br/><br/><br/><br/>
       <section>
       {
           this.state.isLoading &&
@@ -67,7 +80,7 @@ class App extends Component {
 
       }{
         !this.state.isLoading &&
-        <span>{JSON.stringify(this.state.genres)}}</span>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de séries: {this.state.series.map((element)=>this.renderSerieLink(element.name))}</div>
       }
 
       </section>
