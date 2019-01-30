@@ -19,7 +19,8 @@ class Series extends Component{
       isLoading: false,
       series:[]
     }
-
+    
+    this.renderSeries=this.renderSeries.bind(this)
   }
 
   componentDidMount(){
@@ -29,8 +30,12 @@ class Series extends Component{
 
     })})
 
+  }
+
+  deleteSeries(id){
 
   }
+
 
   renderSeries(series){
 
@@ -49,7 +54,7 @@ class Series extends Component{
                     </div>
                     <div className="col-xs-12 col-md-6">
                       <a className="btn btn-success" href="">Gerenciar</a> &nbsp;
-                      <a className="btn btn-danger" onClick={()=> console.log('excluir')}>Excluir</a>
+                      <a className="btn btn-danger" onClick={()=> this.deleteSeries(series.id)}>Excluir</a>
                     </div>
                   </div>
                 </div>
