@@ -55,6 +55,34 @@
       "genre": "Comédia",
       "comment": "1",
       "id": 7
+    },
+    {
+      "name": "teste",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comment": "a",
+      "id": 8
+    },
+    {
+      "name": "teste1",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comment": "1",
+      "id": 9
+    },
+    {
+      "name": "teste2",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comment": "s",
+      "id": 10
+    },
+    {
+      "name": "testte",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comment": "s",
+      "id": 11
     }
   ],
   "genres": [
