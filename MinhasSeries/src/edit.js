@@ -4,15 +4,16 @@ import { Redirect } from 'react-router-dom'
 
 
 
-class Create extends Component{
+class EditSeries extends Component{
     saveSeries(){
       const newSerie={
+          id: this.props.match.params.id,
         name: this.refs.name.value,
         status: this.refs.status.value,
         genre: this.refs.genre.value,
         comment: this.refs.comment.value
       }
-      apis.saveSerie(newSerie).then(
+      apis.updateSerie(newSerie).then(
 
         this.setState({
           redirect: '/series/'+this.refs.genre.value
@@ -29,13 +30,21 @@ class Create extends Component{
             statusSerie:[],
             genre:[],
             isLoading:false,
-            redirect:false
+            redirect:false,
+            series : []
           }
         this.saveSeries = this.saveSeries.bind(this)
       }  
 
       componentDidMount(){
         this.setState.isLoading = true;
+
+        apis.loadSeriesById(this.props.match.params.id).then((res)=> this.setState({series: res.data}),
+        this.refs.name.value=this.state.series.name,
+        this.refs.genre.value=this.state.series.genre,
+        this.refs.comments.value=this.state.comments.name,
+        this.refs.status.value=this.state.status.name
+        )
 
         apis.loadGenres().then((res)=>{
            
@@ -75,7 +84,7 @@ render(){
 
             <h1>Cadastrar nova série</h1>
             <form>
-                Nome: &nbsp; <input type="text" ref='name' class-Name="form-control" /> 
+                Nome: &nbsp; <input defaultValue={this.state.series.name} type="text" ref='name' class-Name="form-control" /> 
                 <br/> <br/>
                     Genero: &nbsp; <select ref='genre'>
                         {this.state.genre.map(element =><option key = {element} value={element}>{element}</option>)}
@@ -99,4 +108,4 @@ render(){
 
 
 
-export default Create
+export default EditSeries

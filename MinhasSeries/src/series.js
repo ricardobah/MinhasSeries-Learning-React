@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import apis from './api'
-
+import {Link} from 'react-router-dom'
 
 const statustranslate ={
   'watched':'Watched',
@@ -58,7 +58,7 @@ class Series extends Component{
                         {series.genre}/{statustranslate[series.status]}</p>
                     </div>
                     <div className="col-xs-12 col-md-6">
-                      <a className="btn btn-success" href="">Editar</a> &nbsp;
+                      <Link className="btn btn-success" to={"/series/edit/"+series.id} >Editar</Link> &nbsp;
                       <a className="btn btn-danger" onClick={()=> this.deleteSeries(series.id)}>Excluir</a>
                     </div>
                   </div>

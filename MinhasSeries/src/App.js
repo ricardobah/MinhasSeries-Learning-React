@@ -12,7 +12,7 @@ import {
 import Home from './home'
 
 import { Series} from  './series'
-
+import {EditSeries} from '.edit'
 class App extends Component {
 
 
@@ -46,8 +46,9 @@ class App extends Component {
     
     <Route exact path ='/' component={Home}/>
     <Route exact path ='/create' component={Create}/>
+    <Route exact path ='/edit/:id' component={EditSeries}/>
     <Route exact path ='/series/:genre' component={Series}/>
-    <Route exact path ='/series/edit/:id' component={EditSeries}/>
+    
     {/* <Home/> */}
 
     </div>
