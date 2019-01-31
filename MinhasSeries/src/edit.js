@@ -100,6 +100,7 @@ render(){
                 <br/> <br/>
                 <button  onClick={this.saveSeries}>editar</button>
             </form>
+            
         </section> //depois botar imagem e description
     )
 }
