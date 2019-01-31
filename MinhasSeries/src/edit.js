@@ -13,7 +13,7 @@ class EditSeries extends Component{
         genre: this.refs.genre.value,
         comment: this.refs.comment.value
       }
-      apis.updateSerie(newSerie).then(
+      apis.updateSeries(newSerie).then(
 
         this.setState({
           redirect: '/series/'+this.refs.genre.value
@@ -98,7 +98,7 @@ render(){
                 <br/> <br/>
                 Comentários: &nbsp; <input  ref='comment' type="text" class-Name="form-control" />
                 <br/> <br/>
-                <button  onClick={this.saveSeries}>Salvar</button>
+                <button  onClick={this.saveSeries}>editar</button>
             </form>
         </section> //depois botar imagem e description
     )

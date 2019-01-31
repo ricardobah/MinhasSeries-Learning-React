@@ -5,8 +5,7 @@
       "name": "How I met your mother",
       "status": "watched",
       "genre": "Comédia",
-      "comments": "Muito bom",
-      "img": ""
+      "comment": "undefined"
     },
     {
       "id": 2,
@@ -17,23 +16,23 @@
         "episode": "01",
         "season": "09"
       },
-      "comments": "Bom para descontrair",
+      "comment": "Bom para descontrair",
       "description": "Dexter é uma série televisiva americana de drama/suspense centrada em Dexter Morgan, um assassino em série com diferentes padrões que trabalha como analista forense especialista em padrões de dispersão de sangue no departamento da polícia do Condado de Miami-Dade.[1] O programa estreou em 1 de outubro de 2006 no canal Showtime e teve o seu último episódio em 22 de setembro de 2013. Situado em Miami, sua primeira temporada foi fortemente baseada no livro Darkly Dreaming Dexter de Jeff Lindsay, o primeiro de sua série de romances Dexter. Temporadas posteriores apresentaram uma evolução distinta das obras de Lindsay. O livro foi adaptado para a televisão pelo roteirista James Manos Jr., que escreveu o episódio piloto.",
       "img": ""
     },
     {
       "id": 4,
-      "name": "Vikings",
-      "status": "toWatch",
-      "genre": "Drama",
-      "comments": "Galera fala bem"
+      "name": "Vikings 2",
+      "status": "watching",
+      "genre": "Ação",
+      "comment": "Galera fala bem"
     },
     {
       "id": 5,
       "name": "Criminal Minds",
       "status": "toWatch",
       "genre": "Drama",
-      "comments": "Galera fala bem"
+      "comment": "Galera fala bem"
     },
     {
       "name": "111",
