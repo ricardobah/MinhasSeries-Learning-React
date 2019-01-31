@@ -22,13 +22,6 @@
       "img": ""
     },
     {
-      "id": 3,
-      "name": "Breaking Bad",
-      "status": "watched",
-      "genre": "Drama",
-      "comments": "Say My Name - melhor cena"
-    },
-    {
       "id": 4,
       "name": "Vikings",
       "status": "toWatch",

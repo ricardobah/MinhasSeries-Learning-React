@@ -58,7 +58,7 @@ class Series extends Component{
                         {series.genre}/{statustranslate[series.status]}</p>
                     </div>
                     <div className="col-xs-12 col-md-6">
-                      <a className="btn btn-success" href="">Gerenciar</a> &nbsp;
+                      <a className="btn btn-success" href="">Editar</a> &nbsp;
                       <a className="btn btn-danger" onClick={()=> this.deleteSeries(series.id)}>Excluir</a>
                     </div>
                   </div>
