@@ -34,6 +34,13 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "name": "111",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comment": "1",
+      "id": 7
     }
   ],
   "genres": [

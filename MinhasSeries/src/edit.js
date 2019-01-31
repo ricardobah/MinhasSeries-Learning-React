@@ -31,21 +31,22 @@ class EditSeries extends Component{
             genre:[],
             isLoading:false,
             redirect:false,
-            series : []
+            series : {}
           }
         this.saveSeries = this.saveSeries.bind(this)
       }  
 
       componentDidMount(){
         this.setState.isLoading = true;
-
-        apis.loadSeriesById(this.props.match.params.id).then((res)=> this.setState({series: res.data}),
-        this.refs.name.value=this.state.series.name,
-        this.refs.genre.value=this.state.series.genre,
-        this.refs.comments.value=this.state.comments.name,
-        this.refs.status.value=this.state.status.name
-        )
-
+        apis.loadSeriesById(this.props.match.params.id).then(
+          (res)=>{ this.setState({series: res.data})
+          this.refs.name.value = this.state.series.name
+          this.refs.genre.value = this.state.series.genre
+          this.refs.status.value = this.state.series.status
+          this.refs.comment.value = this.state.series.comment
+        })
+          
+          
         apis.loadGenres().then((res)=>{
            
             this.setState({
@@ -82,20 +83,20 @@ render(){
       
       }
 
-            <h1>Cadastrar nova série</h1>
+            <h1>Editar série</h1>
             <form>
-                Nome: &nbsp; <input defaultValue={this.state.series.name} type="text" ref='name' class-Name="form-control" /> 
+                Nome: &nbsp; <input  type="text" ref='name' class-Name="form-control" /> 
                 <br/> <br/>
-                    Genero: &nbsp; <select ref='genre'>
+                    Genero: &nbsp; <select ref='genre' >
                         {this.state.genre.map(element =><option key = {element} value={element}>{element}</option>)}
                 </select>
                 <br/> <br/>
                 Status: &nbsp; 
-                <select ref='status'>
+                <select ref='status' >
                         {this.state.statusSerie.map(element =><option key = {element} value={element}>{element}</option>)}
                 </select>
                 <br/> <br/>
-                Comentários: &nbsp; <input ref='comment' type="text" class-Name="form-control" />
+                Comentários: &nbsp; <input  ref='comment' type="text" class-Name="form-control" />
                 <br/> <br/>
                 <button  onClick={this.saveSeries}>Salvar</button>
             </form>
@@ -108,4 +109,4 @@ render(){
 
 
 
-export default EditSeries
+export {EditSeries}

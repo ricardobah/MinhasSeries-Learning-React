@@ -12,7 +12,7 @@ import {
 import Home from './home'
 
 import { Series} from  './series'
-import {EditSeries} from '.edit'
+import { EditSeries } from './edit'
 class App extends Component {
 
 
